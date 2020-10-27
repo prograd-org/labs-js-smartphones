@@ -206,4 +206,3 @@ Create a class called Mobile Campus and a method to it:  changeMobileAvailabilit
 
 
 Happy Coding ProGrads❤️
-
