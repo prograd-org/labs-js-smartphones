@@ -60,7 +60,7 @@ class AndroidPhone extends SmartPhone {
 IPhone class should extend the SmartPhone and should receive 4 arguments(seriesName, ram, batteryPower, price), so we have to write the correct code. Let's make the IPhone class receive 4 arguments:
 ```
 class IPhone extends SmartPhone {
-    constructor(seriesName, ram, batteryPower, price) {}
+    constructor(modelName, ram, batteryPower, price) {}
     
     }
 ```
