@@ -1,5 +1,5 @@
    
-//SmartPhone
+//SmartPhone..
 class SmartPhone{
     constructor(ram, batteryPower, price){
         this.ram=ram;
@@ -15,7 +15,7 @@ class SmartPhone{
 }
 
 
-// AndroidPhone
+// AndroidPhone..
 class AndroidPhone extends SmartPhone{
     constructor(modelName, ram, batteryPower, price) {
         super(ram, batteryPower, price)
@@ -61,7 +61,7 @@ class IPhone extends SmartPhone{
 
 
 
-//MobileCampus
+//MobileCampus..
 class MobileCampus{
     constructor(NoOfMobiles, NoOfAndroidMobiles, NoOfIPhoneMobiles){
         this.NoOfMobiles=NoOfMobiles;
