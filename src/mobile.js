@@ -56,7 +56,6 @@ class IPhone extends SmartPhone {
     }
 }
 
-//MobileCampus
 class MobileCampus {
     constructor(NoOfMobiles, NoOfAndroidMobiles, NoOfIPhoneMobiles) {
         this.NoOfMobiles = NoOfMobiles;
