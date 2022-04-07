@@ -73,4 +73,4 @@ class MobileCampus {
             return 'Available iphone mobiles are ' + this.NoOfIPhoneMobiles;
         }
     }
-}
+} 
