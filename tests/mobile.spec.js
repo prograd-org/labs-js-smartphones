@@ -145,7 +145,7 @@ describe('IPhone', () => {
   const ram = '4GB';
   const batteryPower = '3800mAh';
   const price = 64000;
-
+ 
   beforeEach(() => {
     iphone = new IPhone(seriesName, ram, batteryPower, price);
   });
