@@ -53,7 +53,7 @@ describe('SmartPhone', () => {
     
     it('should find the remaining amount that you have after buying the smart phone', () => {
       smartPhone.remainingAmount(25500);
-      expect(smartPhone.price).toEqual(price - 25500);
+      expect(smartPhone.price).toEqual( 25500 -price);
     });
     
     it("shouldn't return anything", () => {
@@ -145,7 +145,7 @@ describe('IPhone', () => {
   const ram = '4GB';
   const batteryPower = '3800mAh';
   const price = 64000;
-
+ 
   beforeEach(() => {
     iphone = new IPhone(seriesName, ram, batteryPower, price);
   });
