@@ -1,14 +1,11 @@
 /**
  Starting with version 2.0, this file "boots" Jasmine, performing all of the necessary initialization before executing the loaded environment and all of a project's specs. This file should be loaded after `jasmine.js` and `jasmine_html.js`, but before any project source files or spec files are loaded. Thus this file can also be used to customize Jasmine for a project.
-
  If a project is using Jasmine via the standalone distribution, this file can be customized directly. If a project is using Jasmine via the [Ruby gem][jasmine-gem], this file can be copied into the support directory via `jasmine copy_boot_js`. Other environments (e.g., Python) will have different mechanisms.
-
  The location of `boot.js` can be specified and/or overridden in `jasmine.yml`.
-
  [jasmine-gem]: http://github.com/pivotal/jasmine-gem
  */
 
-(function() {
+ (function() {
 
   /**
    * ## Require &amp; Instantiate
@@ -46,26 +43,26 @@
    */
 
   var queryString = new jasmine.QueryString({
-    getWindowLocation: function() { return window.location; }
+      getWindowLocation: function() { return window.location; }
   });
 
   var filterSpecs = !!queryString.getParam("spec");
 
   var config = {
-    failFast: queryString.getParam("failFast"),
-    oneFailurePerSpec: queryString.getParam("oneFailurePerSpec"),
-    hideDisabled: queryString.getParam("hideDisabled")
+      failFast: queryString.getParam("failFast"),
+      oneFailurePerSpec: queryString.getParam("oneFailurePerSpec"),
+      hideDisabled: queryString.getParam("hideDisabled")
   };
 
   var random = queryString.getParam("random");
 
   if (random !== undefined && random !== "") {
-    config.random = random;
+      config.random = random;
   }
 
   var seed = queryString.getParam("seed");
   if (seed) {
-    config.seed = seed;
+      config.seed = seed;
   }
 
   /**
@@ -73,14 +70,14 @@
    * The `HtmlReporter` builds all of the HTML UI for the runner page. This reporter paints the dots, stars, and x's for specs, as well as all spec names and all failures (if any).
    */
   var htmlReporter = new jasmine.HtmlReporter({
-    env: env,
-    navigateWithNewParam: function(key, value) { return queryString.navigateWithNewParam(key, value); },
-    addToExistingQueryString: function(key, value) { return queryString.fullStringWithNewParam(key, value); },
-    getContainer: function() { return document.body; },
-    createElement: function() { return document.createElement.apply(document, arguments); },
-    createTextNode: function() { return document.createTextNode.apply(document, arguments); },
-    timer: new jasmine.Timer(),
-    filterSpecs: filterSpecs
+      env: env,
+      navigateWithNewParam: function(key, value) { return queryString.navigateWithNewParam(key, value); },
+      addToExistingQueryString: function(key, value) { return queryString.fullStringWithNewParam(key, value); },
+      getContainer: function() { return document.body; },
+      createElement: function() { return document.createElement.apply(document, arguments); },
+      createTextNode: function() { return document.createTextNode.apply(document, arguments); },
+      timer: new jasmine.Timer(),
+      filterSpecs: filterSpecs
   });
 
   /**
@@ -93,11 +90,11 @@
    * Filter which specs will be run by matching the start of the full name against the `spec` query param.
    */
   var specFilter = new jasmine.HtmlSpecFilter({
-    filterString: function() { return queryString.getParam("spec"); }
+      filterString: function() { return queryString.getParam("spec"); }
   });
 
   config.specFilter = function(spec) {
-    return specFilter.matches(spec.getFullName());
+      return specFilter.matches(spec.getFullName());
   };
 
   env.configure(config);
@@ -118,19 +115,19 @@
   var currentWindowOnload = window.onload;
 
   window.onload = function() {
-    if (currentWindowOnload) {
-      currentWindowOnload();
-    }
-    htmlReporter.initialize();
-    env.execute();
+      if (currentWindowOnload) {
+          currentWindowOnload();
+      }
+      htmlReporter.initialize();
+      env.execute();
   };
 
   /**
    * Helper function for readability above.
    */
   function extend(destination, source) {
-    for (var property in source) destination[property] = source[property];
-    return destination;
+      for (var property in source) destination[property] = source[property];
+      return destination;
   }
 
 }());
