@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>labs-js-smartphones</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="labs-js-smartphones" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://nirmalanim.github.io/labs-js-smartphones/" />
+<meta property="og:url" content="https://nirmalanim.github.io/labs-js-smartphones/" />
+<meta property="og:site_name" content="labs-js-smartphones" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="labs-js-smartphones" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"labs-js-smartphones","name":"labs-js-smartphones","url":"https://nirmalanim.github.io/labs-js-smartphones/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/labs-js-smartphones/assets/css/style.css?v=4080378630233600358f83ec6e505774b4674eb8">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/labs-js-smartphones/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://nirmalanim.github.io/labs-js-smartphones/">labs-js-smartphones</a></h1>
+      
+
+      <p><img src="https://i1.faceprep.in/ProGrad/prograd-logo.png" alt="Image description" /></p>
+
+<h1 id="prograd-lab--js-smart-phone">ProGrad Lab | JS SMART PHONE</h1>
+
+<p>We have learned Object-oriented programming and how class and inheritance work in JavaScript. Now lets work with our smart phones, applying all of the concepts we have just learned.</p>
+
+<h2 id="what-should-you-do">What should you do</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Fork this repo
+Clone this repo
+Practice OOPs Features
+</code></pre></div></div>
+
+<h2 id="how-to-submit">How To Submit</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Upon completion, run the following commands:
+
+git add .
+git commit -m "ProGrad ID"
+git push origin master
+
+And finally, create a pull request so your ProGrad Mentor (PM) can review your work.
+</code></pre></div></div>
+
+<h2 id="instructions">Instructions</h2>
+<p>We must write the correct code in the script.js file. In this file you will find the following starter code:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class SmartPhone{
+
+}
+
+class AndroidPhone extends SmartPhone{
+
+}
+
+class IPhone extends SmartPhone{
+
+}
+
+class MobileCampus{
+
+}
+</code></pre></div></div>
+
+<p>In this case, it says that SmartPhone class should receive 3 arguments(ram, batteryPower, price), so we have to write the correct code. Let’s make the SmartPhone class receive 3 arguments:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class SmartPhone{
+constructor(ram, batteryPower, price){}
+
+}
+</code></pre></div></div>
+<p>AndroidPhone class should extend the SmartPhone and should receive 4 arguments(modelName, ram, batteryPower, price), so we have to write the correct code. Let’s make the AndroidPhone class receive 4 arguments:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class AndroidPhone extends SmartPhone {
+    constructor(modelName, ram, batteryPower, price) {}
+    
+    }
+</code></pre></div></div>
+<p>IPhone class should extend the SmartPhone and should receive 4 arguments(seriesName, ram, batteryPower, price), so we have to write the correct code. Let’s make the IPhone class receive 4 arguments:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class IPhone extends SmartPhone {
+    constructor(seriesName, ram, batteryPower, price) {}
+    
+    }
+</code></pre></div></div>
+<p>The final class is called MobileCampus which should receive 3 arguments(NoOfMobiles, NoOfAndroidMobiles, NoOfIPhoneMobiles), so we have to write the correct code. Let’s make the MobileCampus class receive 3 arguments:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MobileCampus{
+    constructor(NoOfMobiles, NoOfAndroidMobiles, NoOfIPhoneMobiles){}
+    
+    }
+</code></pre></div></div>
+
+<h3 id="progression-1-smart-phone">Progression 1: SMART PHONE</h3>
+<p>Modify the SmartPhone class and add two methods to it: displayFeatures(), and remainingAmount(priceIHave).</p>
+
+<p><strong>class</strong></p>
+<ul>
+  <li>should receive three arguments ram, batteryPower, price.</li>
+  <li>should receive ram as first argument.</li>
+  <li>should receive batteryPower as second argument.</li>
+  <li>should receive price as third argument.</li>
+</ul>
+
+<p><strong>displayFeatures()</strong></p>
+<ul>
+  <li>should be a method.</li>
+  <li>should receive 0 arguments.</li>
+  <li>should display the features of the smartphone as given below.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  return this.ram +'\n'+this.batteryPower+'\n'+this.price;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>remainingAmount(priceIHave)</strong></p>
+<ul>
+  <li>should be a method.</li>
+  <li>should have 1 arguments.</li>
+  <li>the argument name should be mentioned as priceIHave</li>
+  <li>should calculate the remaining amount the customer has.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> this.price = this.price - priceIHave;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="progression-2--andriod-phone">Progression 2:  ANDRIOD PHONE</h3>
+
+<p>AndroidPhone class should extend the SmartPhone class and add two methods to it: displayFeatures(), and remainingAmount(priceIHave).</p>
+
+<p><strong>class</strong></p>
+<ul>
+  <li>should receive four arguments modelName, ram, batteryPower, price.</li>
+  <li>should receive modelName as first argument.</li>
+  <li>should receive ram as second argument.</li>
+  <li>should receive batteryPower as third argument.</li>
+  <li>shoud receive price as the fourth argument</li>
+  <li>ram, batteryPower and price should be invoked from SmartPhone class. To invoke the parent class constructor you should use <strong>super</strong> keyword.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>constructor(modelName, ram, batteryPower, price) {
+      super(ram, batteryPower, price)
+      this.modelName = modelName;
+  }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>displayFeatures()</strong></p>
+<ul>
+  <li>should be a method.</li>
+  <li>should receive 0 arguments.</li>
+  <li>should display the features of the smartphone as given below.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  return this.modelName +'\n' + this.ram +'\n'+ this.batteryPower +'\n'+ this.price;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>remainingAmount(priceIHave)</strong></p>
+<ul>
+  <li>should be a method.</li>
+  <li>should have 1 arguments.</li>
+  <li>the argument name should be mentioned as priceIHave</li>
+  <li>should calculate the remaining amount the customer has.</li>
+  <li>if the calculated price is less than or equal to zero, return <code class="language-plaintext highlighter-rouge">Customer has no more amount</code>.</li>
+  <li>else return the remaining amount after buying the android phone.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>return 'Customer has remaining Rs.'+this.price +' after buying the android phone';
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="progression-3---iphone">Progression 3:   IPHONE</h3>
+
+<p>IPhone class should extend the SmartPhone class and add two methods to it: displayFeatures(), and remainingAmount(priceIHave).</p>
+
+<p><strong>class</strong></p>
+<ul>
+  <li>should receive four arguments seriesName, ram, batteryPower, price.</li>
+  <li>should receive seriesName as first argument.</li>
+  <li>should receive ram as second argument.</li>
+  <li>should receive batteryPower as third argument.</li>
+  <li>shoud receive price as the fourth argument</li>
+  <li>ram, batteryPower and price should be invoked from SmartPhone class. To invoke the parent class constructor you should use <strong>super</strong> keyword.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>constructor(seriesName, ram, batteryPower, price) {
+      super(ram, batteryPower, price)
+      this.seriesName = seriesName;
+  }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>displayFeatures()</strong></p>
+<ul>
+  <li>should be a method.</li>
+  <li>should receive 0 arguments.</li>
+  <li>should display the features of the smartphone as given below.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> return this.seriesName +'\n' + this.ram +'\n'+ this.batteryPower +'\n'+ this.price;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>remainingAmount(priceIHave)</strong></p>
+<ul>
+  <li>should be a method.</li>
+  <li>should have 1 arguments.</li>
+  <li>the argument name should be mentioned as priceIHave.</li>
+  <li>should calculate the remaining amount the customer has.</li>
+  <li>if the calculated price is less than or equal to zero, return <code class="language-plaintext highlighter-rouge">Customer has no more amount</code>.</li>
+  <li>else return the remaining amount after buying the android phone.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>return 'Customer has remaining Rs.'+this.price +' after buying the Iphone';
+</code></pre></div>    </div>
+  </li>
+  <li>else if the amount is less than the Iphone price, then return
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>return "Customer can't able to buy a phone due to insufficient amount";
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="progression-4--mobile-campus">Progression 4:  MOBILE CAMPUS</h3>
+<p>Create a class called Mobile Campus and a method to it:  changeMobileAvailabilityNumber(count,type)</p>
+
+<p><strong>class</strong></p>
+<ul>
+  <li>should receive three arguments NoOfMobiles, NoOfAndroidMobiles, NoOfIPhoneMobiles.</li>
+  <li>should have NoOfMobiles as first argument.</li>
+  <li>should have NoOfAndroidMobiles as second argument.</li>
+  <li>should have NoOfIPhoneMobiles as third argument.</li>
+</ul>
+
+<p><strong>changeMobileAvailabilityNumber(count,type)</strong></p>
+<ul>
+  <li>should be a method.</li>
+  <li>should have 2 arguments.</li>
+  <li>the first argument name should be count.</li>
+  <li>the second argument name should be type.</li>
+  <li>based on the type of mobile phone calculate the availability of Android Phone and IPhone and return the count.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   if(type === 'android'){
+          this.NoOfAndroidMobiles = this.NoOfAndroidMobiles - count;
+          return 'Available android mobiles are '+this.NoOfAndroidMobiles;
+
+      }
+      if(type === 'iphone'){
+          this.NoOfIPhoneMobiles = this.NoOfIPhoneMobiles - count;
+          return 'Available iphone mobiles are '+this.NoOfIPhoneMobiles;
+      }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Happy Coding ProGrads❤️</p>
+
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
